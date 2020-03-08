@@ -14,7 +14,7 @@ export default class ListSeeds extends Component {
 
   componentDidMount() {
     axios
-      .get('/seeds/')
+      .get('seeds/')
       .then(res => {
         this.setState({ seeds: res.data })
       })
