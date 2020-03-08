@@ -14,7 +14,7 @@ export default class ListSeeds extends Component {
 
   componentDidMount() {
     axios
-      .get(/seeds/')
+      .get('/seeds/')
       .then(res => {
         this.setState({ seeds: res.data })
       })
@@ -24,9 +24,7 @@ export default class ListSeeds extends Component {
   }
 
   deleteSeed(id) {
-    axios
-      .delete('/seeds/' + id)
-      .then(res => console.log(res.data))
+    axios.delete('/seeds/' + id).then(res => console.log(res.data))
 
     this.setState({
       exercises: this.state.exercises.filter(el => el._id !== id)
