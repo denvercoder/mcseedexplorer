@@ -24,7 +24,9 @@ export default class CreateUser extends Component {
       username: this.state.username
     }
 
-    axios.post('/users/add', user).then(res => console.log(res.data))
+    axios
+      .post('https://damp-oasis-40442.herokuapp.com/users/users/add', user)
+      .then(res => console.log(res.data))
 
     window.location = '/'
   }
