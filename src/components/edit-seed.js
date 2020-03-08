@@ -31,10 +31,7 @@ export default class EditSeed extends Component {
 
   componentDidMount() {
     axios
-      .get(
-        'https://damp-oasis-40442.herokuapp.com/users/seeds/' +
-          this.props.match.params.id
-      )
+      .get('/seeds/' + this.props.match.params.id)
       .then(res => {
         this.setState({
           username: res.data.username,
@@ -95,11 +92,7 @@ export default class EditSeed extends Component {
     console.log(seed)
 
     axios
-      .post(
-        'https://damp-oasis-40442.herokuapp.com/users/seeds/update/' +
-          this.props.match.params.id,
-        seed
-      )
+      .post('/seeds/update/' + this.props.match.params.id, seed)
       .then(res => console.log(res.data))
 
     window.location = '/'

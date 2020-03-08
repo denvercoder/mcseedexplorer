@@ -14,7 +14,7 @@ export default class ListSeeds extends Component {
 
   componentDidMount() {
     axios
-      .get('https://damp-oasis-40442.herokuapp.com/users/seeds/')
+      .get(/seeds/')
       .then(res => {
         this.setState({ seeds: res.data })
       })
@@ -25,7 +25,7 @@ export default class ListSeeds extends Component {
 
   deleteSeed(id) {
     axios
-      .delete('https://damp-oasis-40442.herokuapp.com/users/seeds/' + id)
+      .delete('/seeds/' + id)
       .then(res => console.log(res.data))
 
     this.setState({
