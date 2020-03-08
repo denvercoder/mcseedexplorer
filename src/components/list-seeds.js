@@ -49,8 +49,8 @@ export default class ListSeeds extends Component {
     return (
       <div>
         <h3>Seeds</h3>
-        <table>
-          <thead>
+        <table className='table'>
+          <thead className='thead-light'>
             <tr>
               <th>Seed #</th>
               <th>Spawn X:</th>

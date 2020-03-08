@@ -22,7 +22,7 @@ const seedSchema = new Schema(
     //   armorer: {type: Boolean, required: false},
     //   butcher: {type: Boolean, required: false},
     //   cartographer: {type: Boolean, required: false},
-    hasCleric: { type: Boolean, required: true }
+    hasCleric: { type: Boolean, required: false }
     //   farmer: {type: Boolean, required: false},
     //   fisherman: {type: Boolean, required: false},
     //   fletcher: {type: Boolean, required: false},

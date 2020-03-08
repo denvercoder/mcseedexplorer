@@ -10,13 +10,13 @@ const Seed = props => (
     <td>{props.seed.nearVillageCoordX}</td>
     <td>{props.seed.nearVillageCoordY}</td>
     <td>{props.seed.nearVillageCoordZ}</td>
+    <td>{props.seed.hasCleric ? '✅' : '❌'}</td>
+    <td>{props.seed.hasLoot ? '✅' : '❌'}</td>
     <td>{props.seed.nearStrongholdCoordX}</td>
     <td>{props.seed.nearStrongholdCoordY}</td>
     <td>{props.seed.nearStrongholdCoordZ}</td>
     <td>{props.seed.numberOfEnderEyes}</td>
     <td>{props.seed.anythingSpecial}</td>
-    <td>{props.seed.hasCleric}</td>
-    <td>{props.seed.hasLoot}</td>
     <td>
       <Link to={'/edit/' + props.seed._id}>edit</Link>
     </td>
