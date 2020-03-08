@@ -62,7 +62,9 @@ export default class CreateSeed extends Component {
       hasCleric: this.state.hasCleric
     }
 
-    axios.post('/seeds/add', seed).then(res => console.log(res.data))
+    axios
+      .post('https://damp-oasis-40442.herokuapp.com/seeds/add', seed)
+      .then(res => console.log(res.data))
 
     window.location = '/'
   }
