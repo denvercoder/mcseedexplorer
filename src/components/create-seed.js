@@ -62,11 +62,7 @@ export default class CreateSeed extends Component {
       hasCleric: this.state.hasCleric
     }
 
-    console.log(seed)
-
-    axios
-      .post('http://localhost:5000/seeds/add', seed)
-      .then(res => console.log(res.data))
+    axios.post('/seeds/add', seed).then(res => console.log(res.data))
 
     window.location = '/'
   }

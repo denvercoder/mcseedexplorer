@@ -31,7 +31,7 @@ export default class EditSeed extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:5000/seeds/' + this.props.match.params.id)
+      .get('/seeds/' + this.props.match.params.id)
       .then(res => {
         this.setState({
           username: res.data.username,
@@ -92,10 +92,7 @@ export default class EditSeed extends Component {
     console.log(seed)
 
     axios
-      .post(
-        'http://localhost:5000/seeds/update/' + this.props.match.params.id,
-        seed
-      )
+      .post('/seeds/update/' + this.props.match.params.id, seed)
       .then(res => console.log(res.data))
 
     window.location = '/'
