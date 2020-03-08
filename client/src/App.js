@@ -7,6 +7,7 @@ import ListSeeds from './components/list-seeds'
 import EditSeed from './components/edit-seed'
 import CreateSeed from './components/create-seed'
 import CreateUser from './components/create-user'
+import Instructions from './components/instructions'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/edit/:id' component={EditSeed} />
         <Route path='/create' component={CreateSeed} />
         <Route path='/user' component={CreateUser} />
+        <Route path='/instructions' component={Instructions} />
       </div>
     </Router>
   )
